@@ -40,12 +40,11 @@ body {
 .project .project_box {
   flex: 0 1 220px;
   aspect-ratio: 1 / 1.3;
-
   border: 1px solid whitesmoke;
-
   border-radius: 15%;
   display: flex;
   justify-content: center;
+  align-items: center;
   cursor: pointer;
   background: transparent;
 }
@@ -62,6 +61,7 @@ body {
   height: 50%;
   width: 100%;
   object-fit: cover;
+  
 }
 .project .project_box a {
   text-decoration: none;
@@ -76,7 +76,8 @@ body {
   color: #e0c3fc;
   margin-top: 3px;
   word-wrap: break-word;
-  font-size: clamp(0.4rem 1vw 1rem);
+  height: 55px;
+    width: 100%;
   overflow-y: auto;
 }
 #footer {
@@ -134,13 +135,13 @@ body {
   }
   .project {
     display: flex;
-    justify-content: center;
+    
     padding: 0px 20px 0px 20px;
     gap: 10px;
     row-gap: 0px;
   }
   .project .project_box {
-    flex: 1 1 calc(50% - 1rem);
+    flex: 0 1 calc(50% - 1rem);
     aspect-ratio: auto;
     height: auto;
     border-radius: 10%;
@@ -148,6 +149,9 @@ body {
     display: flex;
     flex-wrap: nowrap;
     padding: 0px 10px 15px 10px;
+    background: linear-gradient(120deg, #0b1a0e, #300b43d2, #020617);
+  background-repeat: no-repeat;
+  background-size: cover;
   }
 
   .project .project_box .project_name {
