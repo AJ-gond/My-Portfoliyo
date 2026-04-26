@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  margin: 0rem;
+  padding: 0rem;
+}
+html,
+body {
+  background: linear-gradient(120deg, #0b1a0e, #5d1d7fd2, #020617);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  height: auto;
+}
+.heading {
+  background-color: #1e293b;
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.heading_name {
+  font-size: clamp(0rem 2vw 10rem);
+  padding-top: 2rem;
+  font-family: "Changa One", sans-serif;
+  font-weight: 800;
+}
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  width: 100%;
+  border: 5px solid white;
+  border-bottom: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  row-gap: 20px;
+  padding-top: 30px;
+}
+.project .project_box {
+  flex: 0 1 220px;
+  aspect-ratio: 1 / 1.3;
+
+  border: 1px solid whitesmoke;
+
+  border-radius: 15%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  background: transparent;
+}
+.project .project_box :hover {
+  backdrop-filter: blur(2000px);
+  border-radius: 15%;
+  background: linear-gradient(120deg, #0b1a0e, #300b43d2, #020617);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.5s ease;
+}
+
+.project .project_box a img {
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+}
+.project .project_box a {
+  text-decoration: none;
+}
+.project .project_box .project_name {
+  color: #ffffff;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.project .project_box .discription {
+  text-align: center;
+  color: #e0c3fc;
+  margin-top: 3px;
+  word-wrap: break-word;
+  font-size: clamp(0.4rem 1vw 1rem);
+  overflow-y: auto;
+}
+#footer {
+  height: 6vh;
+  width: 100%;
+  background: #090f1b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer h2 {
+  font-size: 2vw;
+  font-family: "Playwrite NZ Guides";
+  font-weight: 400;
+  font-style: normal;
+}
+/* responsive */
+
+@media screen and (max-width: 1150px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  .project {
+    display: flex;
+
+    padding: 0px 20px 0px 20px;
+  }
+  .project .project_box {
+    flex: 0 1 calc(30% - 1rem);
+    aspect-ratio: 1 / auto;
+    border-radius: 10%;
+    margin-top: 20px;
+    display: flex;
+  }
+  .project .project_box .project_name {
+    height: auto;
+    width: auto;
+  }
+  .project .project_box .discription {
+    height: 55px;
+    width: 100%;
+    overflow-y: auto;
+    padding: 0px 10px 0px 10px;
+  }
+
+  #footer h2 {
+    font-size: 7vw;
+  }
+}
+@media screen and (max-width: 650px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  .project {
+    display: flex;
+    justify-content: center;
+    padding: 0px 20px 0px 20px;
+    gap: 10px;
+    row-gap: 0px;
+  }
+  .project .project_box {
+    flex: 1 1 calc(50% - 1rem);
+    aspect-ratio: auto;
+    height: auto;
+    border-radius: 10%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0px 10px 15px 10px;
+  }
+
+  .project .project_box .project_name {
+    height: auto;
+    width: auto;
+  }
+  .project .project_box .discription {
+    height: 55px;
+    width: 100%;
+    overflow-y: auto;
+  }
+
+  #footer h2 {
+    font-size: 7vw;
+  }
+}
